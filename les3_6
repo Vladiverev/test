@@ -1,0 +1,38 @@
+#reursia
+
+def power_recursion(x, y):
+    if y == 0:
+        return 1
+
+    else:
+        return x * power_recursion(x, y-1)
+
+
+print(power_recursion(2, 20))
+
+
+
+def fib_rec(n):                     #fibonachi
+    if n == 1 or n == 2:
+        return 1
+
+    else:
+        return fib_rec(n-2)+fib_rec(n-1)
+
+
+print(fib_rec(1))
+print(fib_rec(4))
+print(fib_rec(500))
+
+
+
+
+
+def fact(n):
+    if n == 1:
+        return  1
+
+    else:
+        return n * fact(n-1)
+
+print(fact(4))
