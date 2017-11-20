@@ -1,34 +1,11 @@
-num = input('Vvedite nomer bileta')
-a = len(num) // 2
+from os import path
 
+import json
 
-def summa_1(num):
-    summa = 0
-    for i in num[:a]:
-        summa += int(i)
-    return summa
+notebook = dict(brand='Lenovo', size=13, ram='8gb')
 
+with open('les6_1.json', 'a') as file:
+    json.dump(notebook, file)
 
-def summa_2(num):
-    summa = 0
-    for i in num[a:]:
-        summa += int(i)
-    return summa
-
-
-b = summa_1(num)
-c = summa_2(num)
-
-num_int = int(num);
-
-while summa_1(str(num_int)) != summa_2(str(num_int)):
-    num_int += 1
-
-print(int(num_int - int(num)))
-
-num_int = int(num);
-
-while summa_1(str(num_int)) != summa_2(str(num_int)):
-    num_int -= 1
-
-print(int(num) - num_int)
+dumped = json.dumps(notebook)
+print(dumped)
