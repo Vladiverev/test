@@ -1,3 +1,22 @@
+#sfs
+from datetime import datetime
+from time import time
+
+str1 = datetime.strftime(datetime.now(), "%H:%M")
+save = str1
+revstr = str1[::-1]
+if save == revstr:
+    print("string is pailandrom")
+else:
+    print("not pailadrom")
+print(str1)
+
+a = int((time() - int(time()/60./60./24.)*60*60*24)/60./60.)
+print(a)
+
+
+#33313
+
 num = input('Vvedite nomer bileta')
 a = len(num) // 2
 
